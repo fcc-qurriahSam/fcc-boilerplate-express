@@ -1,6 +1,10 @@
 let express = require("express");
 let app = express();
 
+const bodyParser = require("body-parser");
+const handleEncoded = bodyParser.urlencoded({ extended: false });
+app.use("/name", handleEncoded);
+
 const { simpLogger } = require("./simpLogger.js");
 app.use(simpLogger);
 
