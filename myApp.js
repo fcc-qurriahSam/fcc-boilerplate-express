@@ -24,7 +24,7 @@ if (isUpcase === "uppercase") {
 }
 
 app.get("/json", (req, res) => {
-  res.status(200).json({ message: message });
+  res.status(200).send({ message: message });
 });
 
 app.get(
@@ -34,7 +34,7 @@ app.get(
     next();
   },
   (req, res) => {
-    res.json({ time: req.time });
+    res.send({ time: req.time });
   }
 );
 
