@@ -30,7 +30,7 @@ app.get("/json", (req, res) => {
 app.get(
   "/now",
   (req, res, next) => {
-    req.time = new Date().toLocaleString("en-US", { timeZone: "Africa/Nairobi" });
+    req.time = new Date().toLocaleTimeString("en-US", { timeZone: "Africa/Nairobi" });
     next();
   },
   (req, res) => {
