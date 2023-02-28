@@ -1,5 +1,9 @@
 let express = require("express");
 let app = express();
+
+const { simpLogger } = require("./simpLogger.js");
+app.use(simpLogger);
+
 require("dotenv").config();
 
 const isUpcase = process.env.MESSAGE_STYLE;
